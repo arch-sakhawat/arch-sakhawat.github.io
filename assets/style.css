@@ -31,6 +31,26 @@
             --font-mono: 'JetBrains Mono', Consolas, monospace;
         }
 
+/* Custom Text Selection Highlight (Vibrant Orange #ff8400 with Crisp Black Text) */
+::selection {
+    background: #ff8400 !important;
+    color: #000000 !important;
+}
+::-moz-selection {
+    background: #ff8400 !important;
+    color: #000000 !important;
+}
+*::selection {
+    background: #ff8400 !important;
+    color: #000000 !important;
+}
+*::-moz-selection {
+    background: #ff8400 !important;
+    color: #000000 !important;
+}
+
+
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html {
             scroll-behavior: smooth;
