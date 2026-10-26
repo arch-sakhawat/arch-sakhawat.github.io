@@ -11,7 +11,7 @@
     <meta name="description" content="Official developer portfolio and software showcase of Architect Sakhawat Hosen Sumon (Dhaka, Bangladesh). Creator of Shalik for Rhino 8, Shalik Furniture, and ArchTools parametric BIM modeling suites with live viewport preview, double-click editing, and 1-click wall cuts.">
     <meta name="keywords" content="Sakhawat Hosen Sumon, Architect Sakhawat, Shalik, Shalik for Rhino 8, Shalik Furniture, ArchTools, Rhino 8 plugin, Rhino architecture, parametric doors, parametric windows, parametric stairs, Rhino escalator, Rhino curtain wall, space truss, Rhinoceros 8 BIM, computational architecture, Dhaka architect, Rhino commercial plugins">
     <meta name="author" content="Sakhawat Hosen Sumon">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://arch-sakhawat.github.io/">
 
     <!-- Open Graph / Facebook -->
@@ -31,13 +31,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/setup.ico">
 
-    <!-- Google Fonts: Inter, JetBrains Mono & Instrument Serif -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Obsidian Design System Stylesheet -->
-    <link rel="stylesheet" href="assets/site.css">
+    <!-- Unified ArtCraft Design System Stylesheet -->
+    <link rel="stylesheet" href="assets/style.css?v=20261026-minimal-unification">
 
     <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -70,8 +70,8 @@
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "DesignApplication",
           "applicationSubCategory": "CAD Architectural 3D Modeling Plug-in",
-          "softwareVersion": "1.0.4",
-          "downloadUrl": "https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.4-Setup.exe",
+          "softwareVersion": "1.0.6",
+          "downloadUrl": "https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.6-Setup.exe",
           "author": { "@id": "https://arch-sakhawat.github.io/#person" },
           "description": "Parametric architectural modeling suite for Rhinoceros 8 with 15 generators, real-time viewport feedback, and automatic wall cuts."
         },
@@ -92,17 +92,9 @@
 </head>
 <body>
 
-<!-- Elevation Side Ruler Navigation HUD (ArtCraft Style) -->
-<aside class="side-ruler-hud" id="side-ruler-hud" aria-label="Elevation Side Ruler Navigation">
-    <div class="ruler-needle" id="ruler-needle-readout">000% ELEV</div>
-    <div class="ruler-ticks" id="ruler-ticks-track">
-        <!-- Ticks dynamically generated via JS -->
-    </div>
-</aside>
-
 <!-- Global Site Navigation Bar -->
 <nav class="site-nav">
-    <a href="#overview" class="nav-brand">
+    <a href="#top" class="nav-brand">
         <img src="assets/icon.png" alt="Architect Sakhawat Logo">
         <div class="nav-brand-text">
             <span class="nav-brand-title">ARCHITECT SAKHAWAT</span>
@@ -111,540 +103,242 @@
     </a>
     
     <div class="nav-links" id="nav-links">
-        <a href="#overview" class="active">Overview</a>
+        <a href="#top" class="active">Overview</a>
         <a href="#products">Products</a>
         <a href="#tools-matrix">Tool Matrix</a>
         <a href="#showcase">3D Geometry</a>
-        <a href="#pricing">Pricing &amp; bKash</a>
-        <a href="#about">About Me</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#author">About Me</a>
         <a href="#contact">Contact</a>
     </div>
 
     <div class="nav-actions">
-        <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank" class="nav-btn-sub" title="Visit Dedicated Shalik Documentation Portal">
-            <span>Shalik Docs</span>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l10-10M7 7h10v10"></path></svg>
+        <div class="nav-social-group" title="Connect on Social Media">
+            <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20am%20interested%20in%20your%20parametric%20software." target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="Chat on WhatsApp">
+                <img src="assets/social-whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/sakhawat.sumon2" target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="Facebook Profile">
+                <img src="assets/social-facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="Instagram">
+                <img src="assets/social-instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="nav-social-btn" title="LinkedIn">
+                <img src="assets/social-linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+        <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" class="nav-btn-buy" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            <span>Shalik for Rhino ↗</span>
         </a>
-        <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20am%20interested%20in%20your%20Rhino%20software%20products." target="_blank" class="nav-btn-primary">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            <span>WhatsApp</span>
-        </a>
-        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
     </div>
 </nav>
 
-<!-- Hero Section -->
-<header class="hero-container" id="overview">
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-        <div class="hero-status-pill">
-            <span class="hero-status-dot"></span>
-            <span>RHINO 8 &amp; 7 COMPUTATIONAL ENGINES // ONLINE &bull; DHAKA, BANGLADESH</span>
+<!-- Hero Section (Matches SHALIK-For-Rhino Header) -->
+<header class="hero-section" id="top">
+    <!-- Flying Shalik Bird Sky Stage (Restricted to Hero Area, 2 on mobile, max 5 on desktop) -->
+    <div class="shalik-sky-stage" id="shalik-sky-stage"></div>
+        
+    <!-- Architect Branding & Title -->
+    <div>
+        <img src="assets/icon.png" alt="Architect Sakhawat Logo" class="shalik-brand-logo">
+        <div class="hud-label" style="margin-bottom: 12px;">
+            <span class="status-pulse-dot"></span>RHINO 8 &amp; 7 COMPUTATIONAL ENGINES // ONLINE &bull; DHAKA, BANGLADESH
         </div>
-
-        <h1 class="hero-title">
-            Parametric Software &amp; Computational BIM<br>
-            <span class="serif-accent">Engineered for Rhinoceros by Architect Sakhawat.</span>
-        </h1>
-
-        <p class="hero-desc">
+        <h1 class="hero-main-title">Architect Sakhawat Hosen Sumon</h1>
+        <p style="font-size: 1.15rem; font-weight: 600; color: var(--accent-red); margin-bottom: 12px; font-family: var(--font-mono);">
+            Parametric Software &amp; Computational BIM Suites for Rhinoceros
+        </p>
+        <p style="font-size: 0.96rem; color: var(--ink-secondary); max-width: 720px; margin: 0 auto 24px; line-height: 1.65;">
             Eliminate tedious manual 3D drafting with native C# RhinoCommon parametric generators. Code-compliant doors, windows, stairs, railings, curtain walls, space frames, and interior millwork crafted for architects, visualization artists, and computational designers worldwide.
         </p>
+    </div>
 
-        <div class="hero-cta-group">
-            <a href="#products" class="btn-cta-red">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                <span>Explore Products Suite</span>
-            </a>
-            <a href="https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.4-Setup.exe" class="btn-cta-solid">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span>Download Shalik (v1.0.4 &bull; 38.1 MB)</span>
-            </a>
-            <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20want%20to%20learn%20more%20about%20your%20products." target="_blank" class="btn-cta-outline">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                <span>WhatsApp: +8801521776439</span>
-            </a>
-        </div>
+    <div class="cta-container">
+        <a href="#products" class="btn-hero-download" title="Explore Software Suites">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            <span>Explore Software Catalog</span>
+        </a>
+        <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank" rel="noopener noreferrer" class="btn-hero-tutorial" title="Launch Shalik for Rhino 8 Portal">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>Launch Shalik Portal ↗</span>
+        </a>
+        <a href="https://www.youtube.com/@archsakhawat" target="_blank" rel="noopener noreferrer" class="btn-hero-tutorial" title="Watch Video Tutorials on YouTube">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Watch Video Tutorials</span>
+        </a>
+    </div>
 
-        <!-- 4 Key Diagnostics Stats -->
-        <div class="hero-stats-grid">
-            <span class="tick tick-tl"></span>
-            <span class="tick tick-tr"></span>
-            <span class="tick tick-bl"></span>
-            <span class="tick tick-br"></span>
-
-            <div class="stat-box">
-                <div class="stat-num">21+</div>
-                <div class="stat-label">Parametric Generators</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-num">100%</div>
-                <div class="stat-label">Manifold 3D Solids</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-num">15+</div>
-                <div class="stat-label">IBC / EN Code Rules</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-num">&lt; 24h</div>
-                <div class="stat-label">License Key Delivery</div>
-            </div>
-        </div>
+    <div class="meta-strip">
+        <span class="meta-pill">SOFTWARE // <b>5 PRODUCTION SUITES</b></span>
+        <span class="meta-pill">GENERATORS // <b>21 NATIVE ENGINES</b></span>
+        <span class="meta-pill">PLATFORM // <b>RHINO 8 &amp; 7 (WIN x64)</b></span>
+        <span class="meta-pill">DEVELOPER // <b>ARCHITECT SAKHAWAT</b></span>
     </div>
 </header>
 
-<!-- Infinite Marquee Ticker (ArtCraft Studio Style) -->
-<div class="marquee-bar">
-    <div class="marquee-track">
-        <span class="marquee-item"><span class="bullet">▪</span>Shalik for Rhino 8</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Shalik Furniture Suite</span>
-        <span class="marquee-item"><span class="bullet">▪</span>ArchTools Architecture Scripts</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Real-time Viewport DisplayConduit</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Double-Click Edit Dispatcher</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Automated 1-Click Wall Cut Booleans</span>
-        <span class="marquee-item"><span class="bullet">▪</span>InstantSKP 3D Warehouse Browser</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Dynamic Imperial &amp; Metric Scaling</span>
-        <span class="marquee-item"><span class="bullet">▪</span>IBC / EN Building Code Compliance</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Architect Sakhawat Hosen Sumon</span>
-        <!-- Duplicate for seamless looping -->
-        <span class="marquee-item"><span class="bullet">▪</span>Shalik for Rhino 8</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Shalik Furniture Suite</span>
-        <span class="marquee-item"><span class="bullet">▪</span>ArchTools Architecture Scripts</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Real-time Viewport DisplayConduit</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Double-Click Edit Dispatcher</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Automated 1-Click Wall Cut Booleans</span>
-        <span class="marquee-item"><span class="bullet">▪</span>InstantSKP 3D Warehouse Browser</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Dynamic Imperial &amp; Metric Scaling</span>
-        <span class="marquee-item"><span class="bullet">▪</span>IBC / EN Building Code Compliance</span>
-        <span class="marquee-item"><span class="bullet">▪</span>Architect Sakhawat Hosen Sumon</span>
-    </div>
-</div>
+<!-- Main Page Sections Container -->
+<main>
 
-<main class="wrapper">
-
-    <!-- ========================================================================
-         SECTION: ARCHITECT & DEVELOPER PROFILE (KEEP PERSONAL DATA)
-         ======================================================================== -->
-    <section id="about">
+    <!-- SECTION 01: COMMERCIAL SOFTWARE SUITES & PRODUCTS -->
+    <section class="section-wrapper" id="products">
         <div class="section-header">
-            <div class="hud-label red-dot">01 // ARCHITECT &amp; COMPUTATIONAL DEVELOPER</div>
-            <h2>Sakhawat Hosen Sumon</h2>
-            <p>Architect, computational software engineer, and digital toolmaker based in Dhaka, Bangladesh. Dedicated to bridging architectural design intuition with high-speed RhinoCommon C# and Python algorithms.</p>
-        </div>
-
-        <div class="author-profile-hero">
-            <span class="tick tick-tl"></span>
-            <span class="tick tick-tr"></span>
-            <span class="tick tick-bl"></span>
-            <span class="tick tick-br"></span>
-
-            <div class="author-photo-box">
-                <img src="assets/author.png" alt="Architect Sakhawat Hosen Sumon" class="author-photo-img">
-                <div class="author-verified-badge">
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    <span>Verified Architect</span>
-                </div>
-            </div>
-
-            <div class="author-details-box">
-                <div class="hud-label emerald-dot">ACTIVE COMPUTATIONAL PRACTITIONER</div>
-                <h3 class="author-name-title">Sakhawat Hosen Sumon</h3>
-                <div class="author-role-sub">
-                    <span>Architect &amp; Computational Software Developer</span>
-                    <span style="color: var(--ink-faint);">&bull;</span>
-                    <span style="color: var(--ink-secondary);">Dhaka, Bangladesh</span>
-                </div>
-
-                <p class="author-bio-text">
-                    "I design and develop commercial CAD/BIM plugins and automated parametric modeling suites specifically for McNeel Rhinoceros. As a practicing architect, I realized hours are wasted daily on repetitive modeling of doors, windows, staircases, and millwork. My tools empower architects to generate production-ready, code-compliant 3D geometry in seconds with live viewport DisplayConduits and double-click modifying workflows."
-                </p>
-
-                <!-- Personal Data Contact Badges -->
-                <div class="author-connect-grid">
-                    <a href="https://www.facebook.com/sakhawat.sumon2" target="_blank" class="connect-pill">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                        <span>Facebook Profile</span>
-                    </a>
-                    <a href="https://www.youtube.com/@archsakhawat" target="_blank" class="connect-pill">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><polygon points="10 8 15 11 10 14 10 8" fill="currentColor"></polygon></svg>
-                        <span>YouTube Channel</span>
-                    </a>
-                    <a href="https://github.com/arch-sakhawat" target="_blank" class="connect-pill">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        <span>GitHub Profile</span>
-                    </a>
-                    <a href="mailto:arch.sakhawat@gmail.com" class="connect-pill" title="Click to send email">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                        <span>arch.sakhawat@gmail.com</span>
-                    </a>
-                    <a href="https://wa.me/8801521776439" target="_blank" class="connect-pill whatsapp">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                        <span>WhatsApp: +8801521776439</span>
-                    </a>
-                    <div class="connect-pill bkash-pill" onclick="copyBkashQuick()" style="cursor: pointer;" title="Click to copy bKash number">
-                        <span style="color: var(--accent-red-bright); font-weight: bold;">bKash:</span>
-                        <span id="bkash-badge-text">01750955823</span>
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================================================
-         SECTION: MASTER SOFTWARE & PRODUCTS CATALOG (ADD MY PRODUCTS)
-         ======================================================================== -->
-    <section id="products">
-        <div class="section-header">
-            <div class="hud-label red-dot">02 // COMMERCIAL SOFTWARE SUITES &amp; PRODUCTS</div>
+            <div class="hud-label">// 01 COMMERCIAL SOFTWARE SUITES &amp; PRODUCTS</div>
             <h2>Parametric Software Catalog</h2>
             <p>Explore commercial Rhino plugins, interior automation suites, and computational toolkits developed by Architect Sakhawat Hosen Sumon.</p>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div class="filter-tabs-bar">
+        <div class="filter-tabs-bar" style="justify-content: center;">
             <button class="filter-tab-btn active" onclick="filterProducts('all')">All Products (5)</button>
             <button class="filter-tab-btn" onclick="filterProducts('bim')">Architectural BIM (2)</button>
             <button class="filter-tab-btn" onclick="filterProducts('interior')">Furniture &amp; Interior (1)</button>
             <button class="filter-tab-btn" onclick="filterProducts('services')">3D Assets &amp; Consulting (2)</button>
         </div>
 
-        <!-- Products Cards Grid -->
-        <div class="products-cards-grid" id="products-grid">
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid">
 
-            <!-- PRODUCT 1: SHALIK FOR RHINO 8 (FLAGSHIP SUITE) -->
-            <article class="product-card flagship-card" data-category="bim">
-                <span class="tick tick-tl"></span>
-                <span class="tick tick-tr"></span>
-                <span class="tick tick-bl"></span>
-                <span class="tick tick-br"></span>
-
-                <div class="product-card-header">
-                    <div>
-                        <span class="product-card-badge flagship">FLAGSHIP SUITE // v1.0.4 STABLE</span>
-                        <h3 class="product-title" style="margin-top: 8px;">Shalik for Rhino 8</h3>
-                        <div class="product-tagline">High-Performance Parametric Architectural Generation Suite &amp; BIM Engine</div>
-                    </div>
-                    <div class="product-icon-wrap">
-                        <img src="assets/icon.png" alt="Shalik Logo">
-                    </div>
-                </div>
-
-                <div class="product-card-body">
+            <!-- 1. Shalik for Rhino 8 (Flagship) -->
+            <div class="product-card flagship-border" data-category="bim">
+                <div>
+                    <span class="product-card-badge flagship">FLAGSHIP SUITE // v1.0.6 STABLE</span>
+                    <h3 class="product-title">Shalik for Rhino 8</h3>
+                    <div class="product-tagline">High-Performance Parametric Architectural Generation Suite &amp; BIM Engine</div>
                     <p class="product-desc">
-                        The ultimate parametric modeling suite built natively in C# RhinoCommon for McNeel Rhinoceros 8 (Windows x64). Generates 15 code-compliant building elements instantly with real-time viewport DisplayConduits, double-click to edit, and automatic Boolean wall opening cuts.
+                        15 native C# generators for doors, windows, stairs, railings, walls, curtain walls, escalators, space trusses, pitch roofs, louvers, grills, blinds, and trees. Generates watertight manifold polysurfaces with live DisplayConduit viewport feedback, double-click editing, and automated Boolean wall cuts.
                     </p>
-
-                    <ul class="product-features-list">
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>15 Parametric Generators:</b> Doors, Windows, Stairs, Railings, Walls, Escalators, Curtain Walls, Trusses, Space Frames, Trees, Louvers, Roofs, Grills, Blinds, Roads.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Real-time DisplayConduits:</b> Live shaded viewport preview prior to baking geometry.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Double-Click to Edit:</b> Double-click any previously generated object to modify parameters in-place.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>1-Click Wall Cut Booleans:</b> Cuts exact openings through Rhino solid walls with custom sills.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Unit Intelligence:</b> Full Imperial (Inches, Feet) and Metric (mm, cm, m) document awareness.</span>
-                        </li>
-                    </ul>
-
-                    <div class="product-meta-pills">
-                        <span class="meta-chip">RHINO 8.0+ (WIN x64)</span>
-                        <span class="meta-chip">SIZE // 38.1 MB</span>
-                        <span class="meta-chip">AES-256 LICENSING</span>
-                        <span class="meta-chip">LAYER PERSISTENCE</span>
+                    <div class="product-specs-list">
+                        <span class="product-spec-pill">15 Parametric Tools</span>
+                        <span class="product-spec-pill">Live Viewport Conduit</span>
+                        <span class="product-spec-pill">Double-Click Edit</span>
+                        <span class="product-spec-pill">Auto Wall Cuts</span>
+                        <span class="product-spec-pill">IBC/EN Compliant</span>
                     </div>
                 </div>
-
-                <div class="product-card-footer">
-                    <div>
-                        <div class="hud-label" style="font-size: 0.65rem;">STUDENT LICENSE FROM</div>
-                        <div class="product-price-val">500 ৳ <span style="font-size: 0.75rem; color: var(--ink-faint);">/ 30 Days</span></div>
-                    </div>
-                    <div class="product-actions-wrap">
-                        <a href="https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.4-Setup.exe" class="btn-card-action primary">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                            <span>Download .exe</span>
-                        </a>
-                        <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank" class="btn-card-action secondary">
-                            <span>Dedicated Site ↗</span>
-                        </a>
-                    </div>
+                <div class="product-actions-row">
+                    <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank" class="btn-artcraft" style="text-decoration: none;">
+                        <span>Launch Shalik Portal ↗</span>
+                    </a>
+                    <a href="https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.6-Setup.exe" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>Download v1.0.6 Installer</span>
+                    </a>
+                    <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/buy.html" target="_blank" class="btn-artcraft-danger" style="text-decoration: none;">
+                        <span>Buy License</span>
+                    </a>
                 </div>
-            </article>
+            </div>
 
-            <!-- PRODUCT 2: SHALIK FURNITURE FOR RHINO (INTERIOR SUITE) -->
-            <article class="product-card" data-category="interior">
-                <span class="tick tick-tl"></span>
-                <span class="tick tick-tr"></span>
-                <span class="tick tick-bl"></span>
-                <span class="tick tick-br"></span>
-
-                <div class="product-card-header">
-                    <div>
-                        <span class="product-card-badge release">INTERIOR SUITE // v1.0.0</span>
-                        <h3 class="product-title" style="margin-top: 8px;">Shalik Furniture for Rhino</h3>
-                        <div class="product-tagline">Automated Parametric Interior Millwork, Furniture &amp; 3D Warehouse Browser</div>
-                    </div>
-                    <div class="product-icon-wrap">
-                        <img src="assets/icons/Sofa_64.png" alt="Furniture Icon">
-                    </div>
-                </div>
-
-                <div class="product-card-body">
+            <!-- 2. Shalik Furniture for Rhino -->
+            <div class="product-card" data-category="interior">
+                <div>
+                    <span class="product-card-badge">INTERIOR SUITE // v1.0.0</span>
+                    <h3 class="product-title">Shalik Furniture for Rhino</h3>
+                    <div class="product-tagline">Parametric Interior Millwork, Cabinetry &amp; 3D Warehouse Browser</div>
                     <p class="product-desc">
-                        A specialized parametric interior design and millwork suite for Rhinoceros 8 &amp; 7. Includes 6 automated generators with custom dark-red high-DPI toolbars, auto-seating calculations, and integrated SketchUp 3D Warehouse browsing directly inside Rhino.
+                        6 dedicated parametric generators for beds, sofas, dining tables, modular kitchen cabinetry, and office desks with customizable joinery, cushion textures, and edge beveling. Features InstantSKP: 1-click search, download, and import directly from SketchUp 3D Warehouse into Rhino viewports.
                     </p>
-
-                    <ul class="product-features-list">
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Bed Generator:</b> Platform, Cantilever, Wingback, Wall-Panel, Canopy, Tatami &amp; Daybeds.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Sofa Generator:</b> Linear, L-Chaise, U-Sectional, Tuxedo, Curved &amp; Daybeds.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Auto Dining Generator:</b> 2 to 12 seated tables with dynamic designer chairs.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>Kitchen Millwork:</b> Ergonomic Base, Tall &amp; Wall cabinets with LED cove lighting.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span><b>InstantSKP:</b> In-Rhino 3D Warehouse browser &amp; native SketchUp (.SKP) importer.</span>
-                        </li>
-                    </ul>
-
-                    <div class="product-meta-pills">
-                        <span class="meta-chip">RHINO 8 &amp; 7 COMPATIBLE</span>
-                        <span class="meta-chip">YAK PACKAGE READY</span>
-                        <span class="meta-chip">CUSTOM TOOLBAR</span>
+                    <div class="product-specs-list">
+                        <span class="product-spec-pill">6 Millwork Generators</span>
+                        <span class="product-spec-pill">InstantSKP Browser</span>
+                        <span class="product-spec-pill">Real-time Textures</span>
+                        <span class="product-spec-pill">C# RhinoCommon</span>
                     </div>
                 </div>
-
-                <div class="product-card-footer">
-                    <div>
-                        <div class="hud-label" style="font-size: 0.65rem;">PACKAGE STATUS</div>
-                        <div class="product-price-val">Commercial <span style="font-size: 0.75rem; color: var(--ink-faint);">/ License</span></div>
-                    </div>
-                    <div class="product-actions-wrap">
-                        <a href="https://github.com/arch-sakhawat/SHALIK-FURNITURE" target="_blank" class="btn-card-action primary">
-                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            <span>GitHub Repo</span>
-                        </a>
-                        <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20am%20interested%20in%20Shalik%20Furniture%20for%20Rhino." target="_blank" class="btn-card-action secondary">
-                            <span>WhatsApp Inquire</span>
-                        </a>
-                    </div>
+                <div class="product-actions-row">
+                    <a href="https://github.com/arch-sakhawat/SHALIK-FURNITURE" target="_blank" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>View on GitHub ↗</span>
+                    </a>
+                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20am%20interested%20in%20Shalik%20Furniture%20for%20Rhino." target="_blank" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>Inquire Activation</span>
+                    </a>
                 </div>
-            </article>
+            </div>
 
-            <!-- PRODUCT 3: ARCHTOOLS RAPID ARCHITECTURE SUITE -->
-            <article class="product-card" data-category="bim">
-                <span class="tick tick-tl"></span>
-                <span class="tick tick-tr"></span>
-                <span class="tick tick-bl"></span>
-                <span class="tick tick-br"></span>
-
-                <div class="product-card-header">
-                    <div>
-                        <span class="product-card-badge script">MODULAR SCRIPTS // v1.0.3</span>
-                        <h3 class="product-title" style="margin-top: 8px;">ArchTools for Rhino</h3>
-                        <div class="product-tagline">Lightweight Standalone Parametric Scripts &amp; Floating Toolbars</div>
-                    </div>
-                    <div class="product-icon-wrap">
-                        <img src="assets/icons/ArchDoor_64.png" alt="ArchTools Icon">
-                    </div>
-                </div>
-
-                <div class="product-card-body">
+            <!-- 3. ArchTools for Rhino -->
+            <div class="product-card" data-category="bim">
+                <div>
+                    <span class="product-card-badge">STANDALONE UTILITIES</span>
+                    <h3 class="product-title">ArchTools for Rhino</h3>
+                    <div class="product-tagline">Lightweight Parametric Scripts &amp; Automation Utilities</div>
                     <p class="product-desc">
-                        Modular script package and lightweight RhinoCommon utilities designed for architects who need rapid single-command parametric execution for specific drafting tasks like doors, windows, staircases, and roof trusses.
+                        Standalone Rhino 8 C# and Python parametric definitions for rapid facade paneling, daylight louvers, structural truss analysis, and geometric boolean cleanups. Engineered for architecture studios requiring fast, frictionless scripts without heavy installation overhead.
                     </p>
-
-                    <ul class="product-features-list">
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Individual standalone commands (`ArchDoor`, `ArchStair`, `ArchTruss`).</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Includes `ArchTools.rui` toolbar and `ArchTools.rhp` plug-in binary.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Tested and certified for Rhinoceros 8 (Windows x64).</span>
-                        </li>
-                    </ul>
-
-                    <div class="product-meta-pills">
-                        <span class="meta-chip">YAK PACKAGE: archtools-1.0.3</span>
-                        <span class="meta-chip">SETUP INSTALLER</span>
+                    <div class="product-specs-list">
+                        <span class="product-spec-pill">Lightweight Utilities</span>
+                        <span class="product-spec-pill">Rhino 8 Compatible</span>
+                        <span class="product-spec-pill">Rapid Paneling</span>
+                        <span class="product-spec-pill">Grasshopper + C#</span>
                     </div>
                 </div>
-
-                <div class="product-card-footer">
-                    <div>
-                        <div class="hud-label" style="font-size: 0.65rem;">DISTRIBUTION</div>
-                        <div class="product-price-val">Modular <span style="font-size: 0.75rem; color: var(--ink-faint);">/ Yak &amp; Setup</span></div>
-                    </div>
-                    <div class="product-actions-wrap">
-                        <a href="#contact" class="btn-card-action primary">
-                            <span>Request Script</span>
-                        </a>
-                    </div>
+                <div class="product-actions-row">
+                    <a href="https://github.com/arch-sakhawat/ArchTools" target="_blank" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>Explore ArchTools ↗</span>
+                    </a>
                 </div>
-            </article>
+            </div>
 
-            <!-- PRODUCT 4: 3D ASSET LIBRARIES & SOURCE BIM -->
-            <article class="product-card" data-category="services">
-                <span class="tick tick-tl"></span>
-                <span class="tick tick-tr"></span>
-                <span class="tick tick-bl"></span>
-                <span class="tick tick-br"></span>
-
-                <div class="product-card-header">
-                    <div>
-                        <span class="product-card-badge asset">PRODUCTION 3D ASSETS</span>
-                        <h3 class="product-title" style="margin-top: 8px;">3D Asset Libraries &amp; Source BIM</h3>
-                        <div class="product-tagline">High-Detail Rhino 3DM Models &amp; Parametric Component Libraries</div>
-                    </div>
-                    <div class="product-icon-wrap">
-                        <img src="assets/icons/ArchTree_64.png" alt="3D Asset Icon">
-                    </div>
-                </div>
-
-                <div class="product-card-body">
+            <!-- 4. 3D Asset Libraries & Source BIM -->
+            <div class="product-card" data-category="services">
+                <div>
+                    <span class="product-card-badge">CURATED ASSETS</span>
+                    <h3 class="product-title">3D Asset Libraries &amp; Source BIM</h3>
+                    <div class="product-tagline">Production-Ready Native .3dm Models, Materials &amp; Details</div>
                     <p class="product-desc">
-                        Production-ready 3D architectural libraries, parametric templates, and clean manifold `.3dm` files (`Source.3dm`) engineered for real-world construction tolerances, BIM layers, and high-end rendering.
+                        Comprehensive library of tested architectural assemblies, parametric detail components, PBR architectural materials, and site entourage elements curated in native Rhino 8 format (<code>Source.3dm</code>) for instantaneous drag-and-drop production workflow.
                     </p>
-
-                    <ul class="product-features-list">
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Full Rhino 3DM native geometry with assigned material finishes.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Standardized BIM layer hierarchy (`CORE`, `FINISH`, `GLAZING`).</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Ready for V-Ray, Enscape, Lumion, and Twinmotion pipelines.</span>
-                        </li>
-                    </ul>
-
-                    <div class="product-meta-pills">
-                        <span class="meta-chip">RHINO 3DM FORMAT</span>
-                        <span class="meta-chip">BIM READY</span>
+                    <div class="product-specs-list">
+                        <span class="product-spec-pill">Native .3dm Format</span>
+                        <span class="product-spec-pill">PBR Material Setup</span>
+                        <span class="product-spec-pill">Architectural Details</span>
+                        <span class="product-spec-pill">Instant Drag &amp; Drop</span>
                     </div>
                 </div>
-
-                <div class="product-card-footer">
-                    <div>
-                        <div class="hud-label" style="font-size: 0.65rem;">AVAILABILITY</div>
-                        <div class="product-price-val">Studio Library <span style="font-size: 0.75rem; color: var(--ink-faint);">/ Direct Access</span></div>
-                    </div>
-                    <div class="product-actions-wrap">
-                        <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20am%20interested%20in%20your%203D%20Asset%20Libraries." target="_blank" class="btn-card-action primary">
-                            <span>Inquire on WhatsApp</span>
-                        </a>
-                    </div>
+                <div class="product-actions-row">
+                    <a href="mailto:arch.sakhawat@gmail.com?subject=Inquiry:%203D%20Asset%20Libraries%20Source%20BIM" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>Request Access via Email</span>
+                    </a>
                 </div>
-            </article>
+            </div>
 
-            <!-- PRODUCT 5: CUSTOM COMPUTATIONAL CONSULTING -->
-            <article class="product-card" data-category="services">
-                <span class="tick tick-tl"></span>
-                <span class="tick tick-tr"></span>
-                <span class="tick tick-bl"></span>
-                <span class="tick tick-br"></span>
-
-                <div class="product-card-header">
-                    <div>
-                        <span class="product-card-badge release">BESPOKE ENGINEERING</span>
-                        <h3 class="product-title" style="margin-top: 8px;">Custom Computational BIM &amp; Plugins</h3>
-                        <div class="product-tagline">Bespoke C# / Python RhinoCommon Tool Development &amp; Algorithmic Design</div>
-                    </div>
-                    <div class="product-icon-wrap">
-                        <img src="assets/icons/ArchCurtainWall_64.png" alt="Curtain Wall Icon">
-                    </div>
-                </div>
-
-                <div class="product-card-body">
+            <!-- 5. Custom Computational BIM & Plugins -->
+            <div class="product-card" data-category="services">
+                <div>
+                    <span class="product-card-badge">BESPOKE ENGINEERING</span>
+                    <h3 class="product-title">Custom Computational BIM &amp; Plugins</h3>
+                    <div class="product-tagline">C# / Python RhinoCommon Development &amp; Facade Optimization</div>
                     <p class="product-desc">
-                        Need a custom plugin for your architectural firm or complex generative facade automation? Architect Sakhawat Hosen Sumon engineers custom RhinoCommon plugins, Grasshopper algorithmic scripts, and bespoke design workflows.
+                        Commission bespoke software tools, Rhino 8 commercial plugins, Grasshopper compiled components, algorithmic facade panel optimization, and BIM automation pipelines tailored to your architecture firm's precise production standards and structural requirements.
                     </p>
-
-                    <ul class="product-features-list">
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Bespoke Rhino 8 plugins built to your firm's exact CAD drafting standards.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Algorithmic facade optimization, solar louvers, and panelization.</span>
-                        </li>
-                        <li>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            <span>Full intellectual property ownership and training included.</span>
-                        </li>
-                    </ul>
-
-                    <div class="product-meta-pills">
-                        <span class="meta-chip">RHINOCOMMON C# / PYTHON</span>
-                        <span class="meta-chip">ENTERPRISE BIM</span>
+                    <div class="product-specs-list">
+                        <span class="product-spec-pill">RhinoCommon C#</span>
+                        <span class="product-spec-pill">Custom DisplayConduits</span>
+                        <span class="product-spec-pill">Facade Paneling Algorithms</span>
+                        <span class="product-spec-pill">Firm-Wide Licensing</span>
                     </div>
                 </div>
-
-                <div class="product-card-footer">
-                    <div>
-                        <div class="hud-label" style="font-size: 0.65rem;">ENGAGEMENT</div>
-                        <div class="product-price-val">Commission <span style="font-size: 0.75rem; color: var(--ink-faint);">/ Project Basis</span></div>
-                    </div>
-                    <div class="product-actions-wrap">
-                        <a href="#contact" class="btn-card-action primary">
-                            <span>Commission Brief</span>
-                        </a>
-                    </div>
+                <div class="product-actions-row">
+                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20would%20like%20to%20commission%20a%20custom%20Rhino%20computational%20tool." target="_blank" class="btn-artcraft" style="text-decoration: none;">
+                        <span>Commission a Project</span>
+                    </a>
+                    <a href="mailto:arch.sakhawat@gmail.com?subject=Consulting%20Inquiry%20from%20Website" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>Email Inquiry</span>
+                    </a>
                 </div>
-            </article>
+            </div>
 
         </div>
     </section>
 
-    <!-- ========================================================================
-         SECTION: INTERACTIVE 21-TOOL MATRIX & INSTANT SEARCH
-         ======================================================================== -->
-    <section id="tools-matrix">
+    <!-- SECTION 02: INTERACTIVE TOOL MATRIX & COMMAND REGISTRY -->
+    <section class="section-wrapper" id="tools-matrix" style="background: var(--bg-surface); border-top: 1px solid var(--border-line); border-bottom: 1px solid var(--border-line);">
         <div class="section-header">
-            <div class="hud-label red-dot">03 // INTERACTIVE TOOL MATRIX &amp; COMMAND REGISTRY</div>
+            <div class="hud-label">// 02 INTERACTIVE TOOL MATRIX &amp; COMMAND REGISTRY</div>
             <h2>21 Parametric Rhino Generators</h2>
             <p>Every generator is compiled in C# RhinoCommon for instantaneous viewport manipulation, IBC/EN building code compliance, and automated Boolean wall cuts.</p>
         </div>
 
         <div class="tools-catalog-wrapper">
-            <span class="tick tick-tl"></span>
-            <span class="tick tick-tr"></span>
-            <span class="tick tick-bl"></span>
-            <span class="tick tick-br"></span>
-
             <!-- Search Bar -->
             <div class="tools-search-bar">
                 <svg class="tools-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -652,7 +346,7 @@
             </div>
 
             <!-- Category Pills Bar -->
-            <div class="filter-tabs-bar" style="margin-bottom: 16px;">
+            <div class="filter-tabs-bar">
                 <button class="filter-tab-btn active" onclick="setMatrixCategory('all')">All Generators (21)</button>
                 <button class="filter-tab-btn" onclick="setMatrixCategory('doors-windows')">Doors &amp; Windows (2)</button>
                 <button class="filter-tab-btn" onclick="setMatrixCategory('circulation')">Stairs &amp; Circulation (3)</button>
@@ -681,7 +375,7 @@
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchDoor')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchDoor</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
                     <p class="tool-tile-desc">Single, double, pivot, sliding doors with frames, handles, glass inserts, and auto wall cuts.</p>
                 </div>
@@ -697,13 +391,13 @@
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchWindow')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchWindow</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
                     <p class="tool-tile-desc">Fixed, casement, sliding, awning, bifold, multi-pane grids, sills, and automatic wall cuts.</p>
                 </div>
 
                 <!-- 3. ArchWall -->
-                <div class="tool-tile" data-category="doors-windows" data-name="wall archwall shalikwall">
+                <div class="tool-tile" data-category="enclosure" data-name="wall archwall shalikwall">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchWall_64.png" alt="ArchWall"></div>
                         <div class="tool-tile-title-group">
@@ -713,9 +407,9 @@
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchWall')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchWall</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Interactive polyline drawing, dynamic corner mitering, cavity, stud, and multi-layer assemblies.</p>
+                    <p class="tool-tile-desc">Multi-layer architectural walls with core thicknesses, cavity insulation, and boolean host capability.</p>
                 </div>
 
                 <!-- 4. ArchStair -->
@@ -723,35 +417,35 @@
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchStair_64.png" alt="ArchStair"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Staircase Generator</span>
+                            <span class="tool-tile-name">Stair Generator</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchStair')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchStair</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">10 systems: Sawtooth, Closed Housed, Mono-Stringer, Floating, Spiral, Dogleg with auto railings.</p>
+                    <p class="tool-tile-desc">Straight run, L-shape, U-shape, spiral, cantilevered floating treads with IBC/EN rise-run validation.</p>
                 </div>
 
                 <!-- 5. ArchRailing -->
-                <div class="tool-tile" data-category="circulation" data-name="railing archrailing shalikrailing balustrade">
+                <div class="tool-tile" data-category="circulation" data-name="railing archrailing shalikrailing">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchRailing_64.png" alt="ArchRailing"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Railing &amp; Balustrade</span>
+                            <span class="tool-tile-name">Railing Generator</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchRailing')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchRailing</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">10 railing systems: Glass standoff, frameless base shoe, post &amp; clamp, cable rail, balusters.</p>
+                    <p class="tool-tile-desc">Glass balustrades, stainless tension cables, vertical balusters, square posts, and ergonomic handrails.</p>
                 </div>
 
                 <!-- 6. ArchEscalator -->
-                <div class="tool-tile" data-category="circulation" data-name="escalator marchescalator shalikescalator moving walk">
+                <div class="tool-tile" data-category="circulation" data-name="escalator archescalator shalikescalator">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchEscalator_64.png" alt="ArchEscalator"></div>
                         <div class="tool-tile-title-group">
@@ -761,73 +455,73 @@
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchEscalator')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchEscalator</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Commercial escalators &amp; moving walkways with structural trusses, step treads, and balustrades.</p>
+                    <p class="tool-tile-desc">Commercial escalators with internal structural steel trusses, moving handrails, step steps, and comb plates.</p>
                 </div>
 
                 <!-- 7. ArchCurtainWall -->
-                <div class="tool-tile" data-category="enclosure" data-name="curtain wall facade archcurtainwall mullions">
+                <div class="tool-tile" data-category="enclosure" data-name="curtain wall archcurtainwall facade">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchCurtainWall_64.png" alt="ArchCurtainWall"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Curtain Wall Facade</span>
+                            <span class="tool-tile-name">Curtain Wall Suite</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchCurtainWall')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchCurtainWall</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Multi-floor facade grids, mullions, transoms, spandrels, and interactive baseline alignment.</p>
+                    <p class="tool-tile-desc">Parametric mullion-transom grids on planar or curved surfaces with custom glass panels and spandrels.</p>
                 </div>
 
                 <!-- 8. ArchTruss -->
-                <div class="tool-tile" data-category="structure" data-name="truss archtruss archtruss2d structural pratt warren">
+                <div class="tool-tile" data-category="structure" data-name="truss archtruss pratt howe warren">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchTruss_64.png" alt="ArchTruss"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">3D &amp; 2D Truss</span>
+                            <span class="tool-tile-name">Planar Truss</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchTruss')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchTruss</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Pratt, Warren, Howe, X-braced trusses in solid 3D solids or 2D planar centerline drafting.</p>
+                    <p class="tool-tile-desc">Pratt, Howe, Warren, Bowstring, and Scissor steel trusses with customizable chords, webs, and tube profiles.</p>
                 </div>
 
                 <!-- 9. ArchSpaceTruss -->
-                <div class="tool-tile" data-category="structure" data-name="space truss spaceframe archspacetruss mero">
+                <div class="tool-tile" data-category="structure" data-name="spacetruss space frame archspacetruss">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchSpaceTruss_64.png" alt="ArchSpaceTruss"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Space Truss &amp; Frame</span>
+                            <span class="tool-tile-name">Space Truss 3D</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchSpaceTruss')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchSpaceTruss</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Surface-driven 3D structural space frames with pyramid grids and MERO spherical ball nodes.</p>
+                    <p class="tool-tile-desc">Double-layer pyramidal and diagonal 3D space frames with spherical nodal connectors for wide-span roofs.</p>
                 </div>
 
                 <!-- 10. ArchPitchRoof -->
-                <div class="tool-tile" data-category="enclosure" data-name="roof pitch roof archpitchroof hip gable shed">
+                <div class="tool-tile" data-category="enclosure" data-name="roof pitchroof hip gable mansard">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchPitchRoof_64.png" alt="ArchPitchRoof"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Pitch Roof Generator</span>
+                            <span class="tool-tile-name">Pitched Roof</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchPitchRoof')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchPitchRoof</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Hip, gable, shed, gambrel roofs with 6 tile/cladding types and timber/steel framing systems.</p>
+                    <p class="tool-tile-desc">Gable, hip, mansard, shed roofs with rafter framing, fascia boards, gutters, and standing seam corrugated metal.</p>
                 </div>
 
                 <!-- 11. ArchLouver -->
@@ -835,131 +529,131 @@
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchLouver_64.png" alt="ArchLouver"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Louver &amp; Sunshade</span>
+                            <span class="tool-tile-name">Facade Louver</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchLouver')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchLouver</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Architectural brise-soleil, aerodynamic fins, vertical and horizontal sunshade louvers.</p>
+                    <p class="tool-tile-desc">Horizontal and vertical aerodynamic sunshades, brise-soleil blades, and automated solar incident angle tilt.</p>
                 </div>
 
                 <!-- 12. ArchGrill -->
-                <div class="tool-tile" data-category="enclosure" data-name="grill archgrill security window screen">
+                <div class="tool-tile" data-category="enclosure" data-name="grill archgrill jali perforated screen">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchGrill_64.png" alt="ArchGrill"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Security &amp; Privacy Grill</span>
+                            <span class="tool-tile-name">Security Grill &amp; Screen</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchGrill')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchGrill</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Architectural window grills &amp; geometric screens with 12 distinct patterns and bar profiles.</p>
+                    <p class="tool-tile-desc">Perforated screens, metal security grilles, CNC decorative patterns, and modern mashrabiya panels.</p>
                 </div>
 
                 <!-- 13. ArchBlind -->
-                <div class="tool-tile" data-category="enclosure" data-name="blind shades archblind venetian roller">
+                <div class="tool-tile" data-category="enclosure" data-name="blind archblind roller venetian curtain">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchBlind_64.png" alt="ArchBlind"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Window Blinds &amp; Shades</span>
+                            <span class="tool-tile-name">Window Blind</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchBlind')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchBlind</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Venetian, vertical, roller, and matchstick window shades with customizable slat angles.</p>
+                    <p class="tool-tile-desc">Venetian blinds, vertical blinds, roller shades with fabric weight bars, and interactive pull heights.</p>
                 </div>
 
-                <!-- 14. ArchTree -->
-                <div class="tool-tile" data-category="landscape" data-name="tree forest archtree arraytree landscape">
+                <!-- 14. ArchTree & ArrayTree -->
+                <div class="tool-tile" data-category="landscape" data-name="tree archtree arraytree foliage vegetation">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchTree_64.png" alt="ArchTree"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Tree &amp; Forest Array</span>
+                            <span class="tool-tile-name">Tree &amp; Entourage Engine</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchTree')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchTree</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Parametric 3D architectural vegetation (Softwood, Hardwood) and linear/radial forest scattering.</p>
+                    <p class="tool-tile-desc">Algorithmic tree trunks, foliage density, and <code>ArrayTree</code> surface curve distribution.</p>
                 </div>
 
                 <!-- 15. ArchRoad -->
-                <div class="tool-tile" data-category="landscape" data-name="road asphalt archroad street curb">
+                <div class="tool-tile" data-category="landscape" data-name="road archroad asphalt curb sidewalk street">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchRoad_64.png" alt="ArchRoad"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Road &amp; Sidewalk Pavement</span>
+                            <span class="tool-tile-name">Parametric Road &amp; Curb</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchRoad')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchRoad</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Urban road corridors, asphalt curbs, sidewalks, crosswalks, street lights, and lane striping.</p>
+                    <p class="tool-tile-desc">Asphalt carriageways along 3D curves, concrete curb profiles, pedestrian sidewalks, and lane markings.</p>
                 </div>
 
                 <!-- 16. ArchElectricPole -->
-                <div class="tool-tile" data-category="landscape" data-name="electric pole archelectricpole power line utility">
+                <div class="tool-tile" data-category="landscape" data-name="electric pole utility street light archpole">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/ArchElectricPole_64.png" alt="ArchElectricPole"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Utility Pole &amp; Lines</span>
+                            <span class="tool-tile-name">Electric Pole &amp; Streetlight</span>
                             <span class="tool-tile-suite">Shalik Architecture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ArchElectricPole')" title="Click to copy Rhino command">
                         <span>Command: <b>ArchElectricPole</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Modern electric utility poles, cross-arms, transformers, insulators, and catenary power lines.</p>
+                    <p class="tool-tile-desc">Urban utility poles, transformers, catenary cable connections, and parametric highway street lamps.</p>
                 </div>
 
-                <!-- 17. Bed Generator -->
-                <div class="tool-tile" data-category="furniture" data-name="bed bedroom shalikbed platform canopy daybed">
+                <!-- 17. Bed_64 -->
+                <div class="tool-tile" data-category="furniture" data-name="bed furniture mattress headboard pillow shalikfurniture">
                     <div class="tool-tile-top">
-                        <div class="tool-tile-icon"><img src="assets/icons/Bed_64.png" alt="Bed"></div>
+                        <div class="tool-tile-icon"><img src="assets/icons/Bed_64.png" alt="Parametric Bed"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Parametric Bed Suite</span>
+                            <span class="tool-tile-name">Bed Generator</span>
                             <span class="tool-tile-suite">Shalik Furniture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ShalikBed')" title="Click to copy Rhino command">
                         <span>Command: <b>ShalikBed</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Modern Platform, Cantilever, Wingback, Hotel Wall-Panel, Canopy, Tatami &amp; Daybed systems.</p>
+                    <p class="tool-tile-desc">Single, Queen, King beds with upholstered headboards, duvet wrinkles, mattress bevels, and nightstands.</p>
                 </div>
 
-                <!-- 18. Sofa Generator -->
-                <div class="tool-tile" data-category="furniture" data-name="sofa couch shaliksofa sectional tuxedo chaise">
+                <!-- 18. Sofa_64 -->
+                <div class="tool-tile" data-category="furniture" data-name="sofa couch cushion armchair sectional shalikfurniture">
                     <div class="tool-tile-top">
-                        <div class="tool-tile-icon"><img src="assets/icons/Sofa_64.png" alt="Sofa"></div>
+                        <div class="tool-tile-icon"><img src="assets/icons/Sofa_64.png" alt="Parametric Sofa"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Parametric Sofa Suite</span>
+                            <span class="tool-tile-name">Sofa &amp; Seating</span>
                             <span class="tool-tile-suite">Shalik Furniture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ShalikSofa')" title="Click to copy Rhino command">
                         <span>Command: <b>ShalikSofa</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Modern Linear, L-Chaise, U-Sectional, Tuxedo, Curved, and Modular Daybed typologies.</p>
+                    <p class="tool-tile-desc">1, 2, 3-seater sofas, L-sectionals, modern armchairs with plush cushions, stitching seams, and turned wooden legs.</p>
                 </div>
 
-                <!-- 19. Dining Table -->
-                <div class="tool-tile" data-category="furniture" data-name="dining table chairs shalikdining seating">
+                <!-- 19. DiningTable_64 -->
+                <div class="tool-tile" data-category="furniture" data-name="dining table chair banquet shalikfurniture">
                     <div class="tool-tile-top">
                         <div class="tool-tile-icon"><img src="assets/icons/DiningTable_64.png" alt="Dining Table"></div>
                         <div class="tool-tile-title-group">
@@ -967,144 +661,128 @@
                             <span class="tool-tile-suite">Shalik Furniture</span>
                         </div>
                     </div>
-                    <div class="tool-cmd-chip" onclick="copyCommand('ShalikDiningTable')" title="Click to copy Rhino command">
-                        <span>Command: <b>ShalikDiningTable</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <div class="tool-cmd-chip" onclick="copyCommand('ShalikDining')" title="Click to copy Rhino command">
+                        <span>Command: <b>ShalikDining</b></span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Auto-seated (2 to 12 seats) Rectangular, Round, Oval &amp; Boat tables with designer dining chairs.</p>
+                    <p class="tool-tile-desc">Rectangular, round, oval dining tables with 4, 6, 8, 10 auto-spaced ergonomic chairs and center runners.</p>
                 </div>
 
-                <!-- 20. Kitchen Millwork -->
-                <div class="tool-tile" data-category="furniture" data-name="kitchen cabinet millwork shalikkitchen base tall led">
+                <!-- 20. Kitchen_64 -->
+                <div class="tool-tile" data-category="furniture" data-name="kitchen cabinet millwork countertop sink cooktop shalikfurniture">
                     <div class="tool-tile-top">
-                        <div class="tool-tile-icon"><img src="assets/icons/Kitchen_64.png" alt="Kitchen"></div>
+                        <div class="tool-tile-icon"><img src="assets/icons/Kitchen_64.png" alt="Kitchen Millwork"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Kitchen Cabinet Millwork</span>
+                            <span class="tool-tile-name">Kitchen Millwork</span>
                             <span class="tool-tile-suite">Shalik Furniture</span>
                         </div>
                     </div>
                     <div class="tool-cmd-chip" onclick="copyCommand('ShalikKitchen')" title="Click to copy Rhino command">
                         <span>Command: <b>ShalikKitchen</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Modern Ergonomic Base, Tall &amp; Wall Cabinet millwork with integrated appliances &amp; LED cove lighting.</p>
+                    <p class="tool-tile-desc">Base cabinets, wall units, island counters, undermount sinks, gas cooktops, and toe-kick extrusions.</p>
                 </div>
 
-                <!-- 21. Office Desk & InstantSKP -->
-                <div class="tool-tile" data-category="furniture" data-name="desk office workstation shalikofficedesk chair">
+                <!-- 21. InstantSKP_64 -->
+                <div class="tool-tile" data-category="utility" data-name="instantskp warehouse sketchup 3d warehouse browser import skp">
                     <div class="tool-tile-top">
-                        <div class="tool-tile-icon"><img src="assets/icons/OfficeDesk_64.png" alt="Office Desk"></div>
+                        <div class="tool-tile-icon"><img src="assets/icons/InstantSKP_64.png" alt="InstantSKP"></div>
                         <div class="tool-tile-title-group">
-                            <span class="tool-tile-name">Office Desk &amp; Workstations</span>
-                            <span class="tool-tile-suite">Shalik Furniture</span>
+                            <span class="tool-tile-name">InstantSKP 3D Warehouse</span>
+                            <span class="tool-tile-suite">Shalik Suite Utility</span>
                         </div>
                     </div>
-                    <div class="tool-cmd-chip" onclick="copyCommand('ShalikOfficeDesk')" title="Click to copy Rhino command">
-                        <span>Command: <b>ShalikOfficeDesk</b></span>
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <div class="tool-cmd-chip" onclick="copyCommand('InstantSKP')" title="Click to copy Rhino command">
+                        <span>Command: <b>InstantSKP</b></span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </div>
-                    <p class="tool-tile-desc">Executive Desks, Computer Workstations, modesty panels &amp; ergonomic task chair layouts.</p>
+                    <p class="tool-tile-desc">Search, download, and import models from SketchUp 3D Warehouse directly into Rhino 8 with automatic layer cleanup.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- ========================================================================
-         SECTION: 3D GEOMETRY SHOWCASE & SPLIT COMPARISON SLIDER
-         ======================================================================== -->
-    <section id="showcase">
+    <!-- SECTION 03: LIVE 3D GEOMETRY STUDIO GALLERY -->
+    <section class="section-wrapper" id="showcase">
         <div class="section-header">
-            <div class="hud-label red-dot">04 // VIEWPORT GEOMETRY &amp; COMPARISON STUDIO</div>
+            <div class="hud-label">// 03 VIEWPORT GEOMETRY &amp; COMPARISON STUDIO</div>
             <h2>Live 3D Geometry Studio Gallery</h2>
             <p>Inspect real Rhino 8 viewport geometry generated by the Shalik suites. Click any render to inspect in high-resolution full-screen lightbox view.</p>
         </div>
 
         <div class="showcase-stage-wrap">
-            <span class="tick tick-tl"></span>
-            <span class="tick tick-tr"></span>
-            <span class="tick tick-bl"></span>
-            <span class="tick tick-br"></span>
-
             <div class="showcase-topbar">
-                <div class="hud-label red-dot" id="showcase-label">
+                <div class="hud-label" id="showcase-label" style="margin: 0;">
                     RHINO 8 VIEWPORT &bull; SLIDE 01 // 6-LITE GLAZED CONTEMPORARY DOOR
                 </div>
-                <div class="showcase-tabs">
-                    <button class="showcase-tab-btn active" onclick="switchShowcaseSlide(0)">01 // Glazed Door</button>
-                    <button class="showcase-tab-btn" onclick="switchShowcaseSlide(1)">02 // Stair &amp; Railing</button>
-                    <button class="showcase-tab-btn" onclick="switchShowcaseSlide(2)">03 // Escalator</button>
-                    <button class="showcase-tab-btn" onclick="switchShowcaseSlide(3)">04 // Split Compare</button>
+                <div style="display: flex; gap: 8px;">
+                    <button type="button" class="btn-artcraft-outline" onclick="prevShowcaseSlide()" style="padding: 4px 10px; font-size: 0.75rem;">&larr; Prev</button>
+                    <button type="button" class="btn-artcraft-outline" onclick="nextShowcaseSlide()" style="padding: 4px 10px; font-size: 0.75rem;">Next &rarr;</button>
                 </div>
             </div>
 
-            <div class="showcase-viewport" id="showcase-viewport">
-                <!-- Slide 0: Glazed Door -->
-                <div class="showcase-slide-item active" id="sc-slide-0" onclick="openLightbox('assets/demo/demo_door_glass.png')">
-                    <img src="assets/demo/demo_door_glass.png" alt="Glazed Door 3D Render">
+            <!-- Tabbed Selector -->
+            <div class="showcase-tabs">
+                <button class="showcase-tab-btn active" onclick="switchShowcaseSlide(0)">01 // Glazed Door System</button>
+                <button class="showcase-tab-btn" onclick="switchShowcaseSlide(1)">02 // Stair &amp; Cable Railing</button>
+                <button class="showcase-tab-btn" onclick="switchShowcaseSlide(2)">03 // Commercial Escalator</button>
+                <button class="showcase-tab-btn" onclick="switchShowcaseSlide(3)">04 // Interactive Comparison</button>
+            </div>
+
+            <!-- Viewport Slider Container -->
+            <div class="showcase-slider-viewport">
+                <!-- Slide 0: Door -->
+                <div class="showcase-slide-item active">
+                    <img src="assets/demo/demo_door_glass.png" alt="Parametric 6-Lite Glazed Door" class="showcase-slide-img" onclick="openLightbox('assets/demo/demo_door_glass.png')">
                 </div>
 
-                <!-- Slide 1: Stair with Railing -->
-                <div class="showcase-slide-item" id="sc-slide-1" onclick="openLightbox('assets/demo/demo_stair_cable_railing.png')">
-                    <img src="assets/demo/demo_stair_cable_railing.png" alt="Stair with Cable Railing 3D Render">
+                <!-- Slide 1: Stair -->
+                <div class="showcase-slide-item">
+                    <img src="assets/demo/demo_stair_cable_railing.png" alt="Parametric Stair with Cable Railing" class="showcase-slide-img" onclick="openLightbox('assets/demo/demo_stair_cable_railing.png')">
                 </div>
 
                 <!-- Slide 2: Escalator -->
-                <div class="showcase-slide-item" id="sc-slide-2" onclick="openLightbox('assets/demo/demo_escalator.png')">
-                    <img src="assets/demo/demo_escalator.png" alt="Commercial Escalator 3D Render">
+                <div class="showcase-slide-item">
+                    <img src="assets/demo/demo_escalator.png" alt="Parametric Commercial Escalator" class="showcase-slide-img" onclick="openLightbox('assets/demo/demo_escalator.png')">
                 </div>
 
-                <!-- Slide 3: Split Compare -->
-                <div class="showcase-slide-item" id="sc-slide-3">
+                <!-- Slide 3: Draggable Split Slider -->
+                <div class="showcase-slide-item">
                     <div class="split-box" id="split-box">
-                        <div class="split-bottom-img">
-                            <img src="assets/demo/demo_escalator.png" alt="Escalator">
-                        </div>
+                        <img src="assets/demo/demo_escalator.png" alt="Commercial Escalator Truss" class="split-img">
                         <div class="split-top-img" id="split-top-img">
-                            <img src="assets/demo/demo_stair_cable_railing.png" alt="Staircase">
+                            <img src="assets/demo/demo_stair_cable_railing.png" alt="Cantilevered Staircase">
                         </div>
-                        <div class="split-handle" id="split-handle">
-                            <div class="split-handle-badge">◂ DRAG TO COMPARE CIRCULATION ▸</div>
-                        </div>
+                        <div class="split-handle" id="split-handle"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="showcase-bottombar">
-                <div class="showcase-caption" id="showcase-caption">
-                    <b>Model 01 // 6-Lite Glazed Door:</b> Parametric solid timber leaf, double-glazed insulated lites, mitered casing trim, architectural threshold, modern lever handle, and live interactive swing angle.
-                </div>
-                <div class="nav-actions">
-                    <button class="nav-btn-sub" onclick="prevShowcaseSlide()">← PREV</button>
-                    <button class="nav-btn-sub" onclick="nextShowcaseSlide()">NEXT →</button>
-                </div>
+            <!-- Interactive Caption Bar -->
+            <div class="showcase-caption-bar" id="showcase-caption">
+                <b>Model 01 // 6-Lite Glazed Door:</b> Parametric solid timber leaf, double-glazed insulated lites, mitered casing trim, architectural threshold, modern lever handle, and live interactive swing angle.
             </div>
         </div>
     </section>
 
-    <!-- ========================================================================
-         SECTION: LICENSE PRICING & BKASH INSTANT CHECKOUT HUB
-         ======================================================================== -->
-    <section id="pricing">
+    <!-- SECTION 04: PRICING PLANS & INSTANT ACTIVATION -->
+    <section class="section-wrapper" id="pricing" style="background: var(--bg-surface); border-top: 1px solid var(--border-line); border-bottom: 1px solid var(--border-line);">
         <div class="section-header">
-            <div class="hud-label red-dot">05 // PRICING PLANS &amp; INSTANT ACTIVATION</div>
+            <div class="hud-label">// 04 PRICING PLANS &amp; INSTANT ACTIVATION</div>
             <h2>Simple, Transparent Licensing</h2>
             <p>Subsidized rates for architecture and engineering students, alongside professional studio licensing. Pay conveniently via bKash Personal and activate your machine within 24 hours.</p>
         </div>
 
         <div class="pricing-section-wrap">
-            <span class="tick tick-tl"></span>
-            <span class="tick tick-tr"></span>
-            <span class="tick tick-bl"></span>
-            <span class="tick tick-br"></span>
-
             <!-- Pricing Cards Grid -->
             <div class="pricing-cards-grid">
                 <!-- 1 Month Student -->
                 <div class="price-plan-card">
                     <span class="plan-badge">STUDENT SUBSIDY</span>
                     <h3 class="plan-name">1 Month Pass</h3>
-                    <div class="plan-cost">500 ৳ <span>($5 USD)</span></div>
+                    <div class="plan-cost">500 &#2547; <span>($5 USD)</span></div>
                     <ul class="plan-features">
                         <li>30 Days Full Access</li>
                         <li>All 15 Architectural Generators</li>
@@ -1112,7 +790,7 @@
                         <li>Community Updates</li>
                         <li>Student ID verification required</li>
                     </ul>
-                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20want%20to%20activate%201%20Month%20Student%20Plan%20(500%20BDT)." target="_blank" class="btn-card-action primary" style="text-align: center; justify-content: center;">
+                    <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/buy.html" class="btn-artcraft-outline" style="text-align: center; justify-content: center; text-decoration: none;">
                         <span>Select 1 Month</span>
                     </a>
                 </div>
@@ -1121,7 +799,7 @@
                 <div class="price-plan-card">
                     <span class="plan-badge">SEMESTER SPECIAL</span>
                     <h3 class="plan-name">6 Months Semester</h3>
-                    <div class="plan-cost">800 ৳ <span>($8 USD)</span></div>
+                    <div class="plan-cost">800 &#2547; <span>($8 USD)</span></div>
                     <ul class="plan-features">
                         <li>180 Days Full Access</li>
                         <li>All 15 Architectural Generators</li>
@@ -1129,16 +807,16 @@
                         <li>Priority Patch Updates</li>
                         <li>Student ID verification required</li>
                     </ul>
-                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20want%20to%20activate%206%20Months%20Student%20Plan%20(800%20BDT)." target="_blank" class="btn-card-action primary" style="text-align: center; justify-content: center;">
+                    <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/buy.html" class="btn-artcraft-outline" style="text-align: center; justify-content: center; text-decoration: none;">
                         <span>Select 6 Months</span>
                     </a>
                 </div>
 
-                <!-- 12 Months Student (Highlighted) -->
+                <!-- 12 Months Student (Highlighted Best Value) -->
                 <div class="price-plan-card highlight">
-                    <span class="plan-badge" style="color: #ffffff; background: var(--accent-red); padding: 2px 6px; display: inline-block;">BEST VALUE // 1 YEAR</span>
+                    <span class="plan-badge" style="color: #ffffff; background: var(--accent-red); border-color: var(--accent-red);">BEST VALUE // 1 YEAR</span>
                     <h3 class="plan-name">12 Months (1 Year)</h3>
-                    <div class="plan-cost">1,500 ৳ <span>($15 USD)</span></div>
+                    <div class="plan-cost">1,500 &#2547; <span>($15 USD)</span></div>
                     <ul class="plan-features">
                         <li>365 Days Unrestricted Access</li>
                         <li>All 15 Architectural Generators</li>
@@ -1146,7 +824,7 @@
                         <li>Direct WhatsApp VIP Support</li>
                         <li>All Major Feature Releases</li>
                     </ul>
-                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20want%20to%20activate%2012%20Months%20Student%20Plan%20(1500%20BDT)." target="_blank" class="btn-card-action primary" style="text-align: center; justify-content: center;">
+                    <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/buy.html" class="btn-artcraft" style="text-align: center; justify-content: center; text-decoration: none;">
                         <span>Select 1 Year (Best Value)</span>
                     </a>
                 </div>
@@ -1163,7 +841,7 @@
                         <li>Dedicated Architecture Support</li>
                         <li>Custom feature integration</li>
                     </ul>
-                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20we%20want%20to%20inquire%20about%20a%20Commercial%20Studio%20License." target="_blank" class="btn-card-action secondary" style="text-align: center; justify-content: center;">
+                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20we%20want%20to%20inquire%20about%20a%20Commercial%20Studio%20License." target="_blank" class="btn-artcraft-outline" style="text-align: center; justify-content: center; text-decoration: none;">
                         <span>Inquire Commercial</span>
                     </a>
                 </div>
@@ -1173,20 +851,23 @@
             <div class="bkash-checkout-banner">
                 <div class="bkash-row">
                     <div>
-                        <div class="hud-label" style="color: #ff7875; margin-bottom: 6px;">OFFICIAL BKASH PAYMENT NUMBER</div>
+                        <div class="hud-label" style="margin-bottom: 6px;">OFFICIAL BKASH PAYMENT NUMBER</div>
                         <div class="bkash-number-display">
                             <span id="bkash-number-text">01750955823</span>
-                            <span style="font-size: 0.85rem; font-weight: normal; color: #ff7875; font-family: var(--font-mono);">(bKash Personal / Send Money)</span>
+                            <span style="font-size: 0.85rem; font-weight: normal; color: var(--accent-red); font-family: var(--font-mono);">(bKash Personal / Send Money)</span>
                         </div>
                         <div style="font-size: 0.82rem; color: var(--ink-secondary); margin-top: 6px; font-family: var(--font-mono);">
                             Reference note: <b>SHALIK</b> &bull; WhatsApp Confirmation: <b>+8801521776439</b>
                         </div>
                     </div>
-                    <div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                         <button type="button" class="btn-copy-num" id="btn-copy-bkash" onclick="copyBkashAction()">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                             <span id="copy-btn-txt">Copy bKash Number</span>
                         </button>
+                        <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/buy.html" class="btn-artcraft" style="text-decoration: none; font-size: 0.82rem; padding: 10px 18px;">
+                            <span>Open License Order Page ↗</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1196,118 +877,106 @@
                 <div class="step-item">
                     <div class="step-num">STEP 01</div>
                     <div class="step-title">Send bKash Money</div>
-                    <p class="step-desc">Send the exact amount for your chosen plan (500 ৳, 800 ৳, or 1500 ৳) to bKash Personal <b>01750955823</b>.</p>
+                    <p class="step-desc">Send the exact amount for your chosen plan (500 &#2547;, 800 &#2547;, or 1500 &#2547;) to bKash Personal <b>01750955823</b>.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-num">STEP 02</div>
-                    <div class="step-title">Send Verification</div>
-                    <p class="step-desc">WhatsApp or email: 1) Payment TrxID screenshot, 2) Rhino Machine ID (`SHLK-XXXX`), 3) Clear photo of Student ID.</p>
+                    <div class="step-title">Submit Order Form</div>
+                    <p class="step-desc">Open the order page, fill in your details, and redirect directly to Gmail with pre-filled activation template.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-num">STEP 03</div>
                     <div class="step-title">Instant Activation</div>
-                    <p class="step-desc">Receive your official Activation Key within 24 hours. Paste it in Rhino 8 to instantly unlock all 21 tools forever!</p>
+                    <p class="step-desc">Receive your official Activation Key within 24 hours. Paste it in Rhino 8 to instantly unlock all generators forever!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========================================================================
-         SECTION: CONTACT & DIRECT COMMISSION CONNECT
-         ======================================================================== -->
-    <section id="contact">
+    <!-- SECTION 05: ARCHITECT & COMPUTATIONAL DEVELOPER PROFILE (Pure Reference Layout from SHALIK-For-Rhino) -->
+    <section class="author-section-bottom" id="author" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 80px 24px; background: #ffffff;">
+        <div class="hud-label" style="display: inline-flex; align-items: center; justify-content: center; margin: 0 auto 24px; text-align: center;">// ARCHITECT &amp; COMPUTATIONAL DEVELOPER</div>
+
+        <!-- Author Profile Card (Pure reference layout: no background, no border on photo, centered alignment) -->
+        <div class="author-card-hero">
+            <div class="author-photo-wrapper">
+                <img src="assets/author.png?v=20261026-clean-align" alt="Sakhawat Hosen Sumon" class="author-photo">
+            </div>
+            <div class="author-name">Sakhawat Hosen Sumon</div>
+            <div class="author-title">Architect &amp; Computational Software Developer &mdash; 7th Floor, Venus Complex, Dhaka 1217</div>
+            <p style="font-size: 0.92rem; color: var(--ink-secondary); max-width: 620px; margin: 12px auto 20px; line-height: 1.6;">
+                Dedicated to bridging architectural design intuition with high-speed RhinoCommon C# and Python algorithms. Creator of Shalik for Rhino 8, Shalik Furniture, and ArchTools parametric toolkits.
+            </p>
+            
+            <div class="author-links-bar">
+                <a href="https://www.facebook.com/sakhawat.sumon2" target="_blank" rel="noopener">
+                    <svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    <span>Facebook Profile</span>
+                </a>
+                <a href="https://www.youtube.com/@archsakhawat" target="_blank" rel="noopener">
+                    <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><polygon points="10 8 15 11 10 14 10 8" fill="currentColor"></polygon><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    <span>YouTube Channel</span>
+                </a>
+                <a href="mailto:arch.sakhawat@gmail.com">
+                    <svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <span>arch.sakhawat@gmail.com</span>
+                </a>
+                <a href="https://wa.me/8801521776439" target="_blank" rel="noopener">
+                    <svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span>WhatsApp: +8801521776439</span>
+                </a>
+                <a href="https://github.com/arch-sakhawat" target="_blank" rel="noopener">
+                    <svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 06: DIRECT CONNECT & PROJECT INQUIRIES -->
+    <section class="section-wrapper" id="contact" style="background: var(--bg-surface); border-top: 1px solid var(--border-line);">
         <div class="section-header">
-            <div class="hud-label red-dot">06 // DIRECT CONNECT &amp; PROJECT INQUIRIES</div>
+            <div class="hud-label">// 06 DIRECT CONNECT &amp; PROJECT INQUIRIES</div>
             <h2>Get in Touch with Architect Sakhawat</h2>
             <p>Order software licenses, commission custom computational tools, or discuss architectural BIM collaborations.</p>
         </div>
 
         <div class="contact-section-wrap">
-            <span class="tick tick-tl"></span>
-            <span class="tick tick-tr"></span>
-            <span class="tick tick-bl"></span>
-            <span class="tick tick-br"></span>
-
             <div class="contact-grid">
-                <!-- Interactive WhatsApp / Email Generator Form -->
-                <div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 16px;">Direct Inquiry Form</h3>
-                    
-                    <div class="form-group">
-                        <label class="form-label">Your Name</label>
-                        <input type="text" id="contact-name" class="form-input" placeholder="e.g. Ar. Tanvir Ahmed">
+                <!-- WhatsApp Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
                     </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Email or WhatsApp Phone</label>
-                        <input type="text" id="contact-phone" class="form-input" placeholder="+880 1XXX-XXXXXX or email@domain.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Product / Service of Interest</label>
-                        <select id="contact-product" class="form-select">
-                            <option value="Shalik for Rhino 8 (License Activation)">Shalik for Rhino 8 (License Activation)</option>
-                            <option value="Shalik Furniture Suite for Rhino">Shalik Furniture Suite for Rhino</option>
-                            <option value="ArchTools Modular Scripts">ArchTools Modular Scripts</option>
-                            <option value="Commercial Firm / Studio License">Commercial Firm / Studio License</option>
-                            <option value="Custom RhinoCommon Plugin Development">Custom RhinoCommon Plugin Development</option>
-                            <option value="3D Architectural Asset Libraries">3D Architectural Asset Libraries</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Message / Rhino Machine ID</label>
-                        <textarea id="contact-msg" class="form-textarea" placeholder="Paste your Rhino Machine ID (SHLK-XXXX-XXXX...) or write your project brief here..."></textarea>
-                    </div>
-
-                    <div class="form-actions-bar">
-                        <button type="button" class="btn-card-action primary" onclick="sendWhatsAppInquiry()">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                            <span>Send via WhatsApp</span>
-                        </button>
-                        <button type="button" class="btn-card-action secondary" onclick="sendEmailInquiry()">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                            <span>Send via Email</span>
-                        </button>
-                    </div>
+                    <div class="contact-card-title">WhatsApp Direct</div>
+                    <div class="contact-card-desc">Instant 1-on-1 chat with Architect Sakhawat for activation confirmation, student verification, or urgent queries.</div>
+                    <a href="https://wa.me/8801521776439?text=Hello%20Architect%20Sakhawat,%20I%20am%20contacting%20you%20from%20arch-sakhawat.github.io." target="_blank" class="btn-artcraft" style="text-decoration: none; margin-top: auto; justify-content: center;">
+                        <span>Chat on WhatsApp (+8801521776439)</span>
+                    </a>
                 </div>
 
-                <!-- Direct Information Card -->
-                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <div>
-                        <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 16px;">Direct Contact Information</h3>
-                        <p style="color: var(--ink-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
-                            Reach out anytime for instant response on WhatsApp or send an email regarding licensing, educational workshops, or computational commissions.
-                        </p>
-
-                        <div style="display: flex; flex-direction: column; gap: 14px; font-family: var(--font-mono); font-size: 0.85rem;">
-                            <div style="display: flex; align-items: center; gap: 12px; color: var(--ink-primary);">
-                                <span style="color: var(--accent-red-bright);">WhatsApp:</span>
-                                <a href="https://wa.me/8801521776439" target="_blank" style="color: #ffffff; text-decoration: underline;">+8801521776439 (01521776439)</a>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 12px; color: var(--ink-primary);">
-                                <span style="color: var(--accent-red-bright);">Email:</span>
-                                <a href="mailto:arch.sakhawat@gmail.com" style="color: #ffffff; text-decoration: underline;">arch.sakhawat@gmail.com</a>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 12px; color: var(--ink-primary);">
-                                <span style="color: var(--accent-red-bright);">bKash:</span>
-                                <span>01750955823 (Personal)</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 12px; color: var(--ink-primary);">
-                                <span style="color: var(--accent-red-bright);">Studio:</span>
-                                <span>Dhaka, Bangladesh</span>
-                            </div>
-                        </div>
+                <!-- Email Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                     </div>
+                    <div class="contact-card-title">Official Email</div>
+                    <div class="contact-card-desc">Formal license inquiries, software bug reports, enterprise multi-seat requests, or academic collaboration proposals.</div>
+                    <a href="mailto:arch.sakhawat@gmail.com?subject=Software%20Inquiry%20from%20arch-sakhawat.github.io" class="btn-artcraft-outline" style="text-decoration: none; margin-top: auto; justify-content: center;">
+                        <span>arch.sakhawat@gmail.com</span>
+                    </a>
+                </div>
 
-                    <div style="margin-top: 30px; padding: 20px; background: var(--bg-sunken); border: 1px solid var(--border-line);">
-                        <div class="hud-label" style="margin-bottom: 6px;">OFFICIAL GITHUB REPOSITORIES</div>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
-                            <li>&bull; <a href="https://github.com/arch-sakhawat/SHALIK-For-Rhino" target="_blank" style="color: #ff7875;">arch-sakhawat/SHALIK-For-Rhino</a></li>
-                            <li>&bull; <a href="https://github.com/arch-sakhawat/SHALIK-FURNITURE" target="_blank" style="color: #ff7875;">arch-sakhawat/SHALIK-FURNITURE</a></li>
-                            <li>&bull; <a href="https://github.com/arch-sakhawat" target="_blank" style="color: #ff7875;">github.com/arch-sakhawat</a></li>
-                        </ul>
+                <!-- Location Card -->
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
+                    <div class="contact-card-title">Computational Studio</div>
+                    <div class="contact-card-desc">Architectural Computation &amp; Algorithm Research Lab &bull; 7th Floor, Venus Complex, Dhaka 1217, Bangladesh.</div>
+                    <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank" class="btn-artcraft-outline" style="text-decoration: none; margin-top: auto; justify-content: center;">
+                        <span>Visit Shalik Portal ↗</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1321,19 +990,22 @@
     <img src="" alt="Fullscreen Render" id="lightbox-img" class="lightbox-img">
 </div>
 
-<!-- Global Site Footer -->
+<!-- Floating Copy Toast Notification -->
+<div class="copy-toast" id="copy-toast">Command copied to clipboard!</div>
+
+<!-- Global Site Footer (Matches SHALIK-For-Rhino) -->
 <footer class="site-footer">
-    <img src="assets/icon.png" alt="Shalik Logo" class="footer-logo">
-    <h3 style="color: #ffffff; font-size: 1.15rem; font-weight: 700; margin-bottom: 6px;">ARCHITECT SAKHAWAT HOSEN SUMON</h3>
-    <p style="font-size: 0.88rem; color: var(--ink-secondary);">Computational Architectural Software &bull; Rhino 8 &amp; 7 BIM Toolkits &bull; Dhaka, Bangladesh</p>
+    <img src="assets/icon.png" alt="Architect Sakhawat Logo" class="footer-logo">
+    <h3 style="color: var(--ink-primary); font-size: 1.15rem; font-weight: 700; margin-bottom: 6px;">ARCHITECT SAKHAWAT HOSEN SUMON</h3>
+    <p style="font-size: 0.88rem; color: var(--ink-secondary); margin-bottom: 18px;">Computational Architectural Software &bull; Rhino 8 &amp; 7 BIM Toolkits &bull; Dhaka, Bangladesh</p>
     
     <div class="footer-nav">
-        <a href="#overview">Overview</a>
+        <a href="#top">Overview</a>
         <a href="#products">Products</a>
         <a href="#tools-matrix">Tool Matrix</a>
         <a href="#showcase">3D Geometry</a>
-        <a href="#pricing">Pricing &amp; bKash</a>
-        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#author">About</a>
         <a href="#contact">Contact</a>
         <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank">Shalik Site ↗</a>
         <a href="https://github.com/arch-sakhawat" target="_blank">GitHub</a>
@@ -1341,7 +1013,7 @@
         <a href="https://www.facebook.com/sakhawat.sumon2" target="_blank">Facebook</a>
     </div>
 
-    <p style="font-size: 0.78rem; color: var(--ink-faint); margin-top: 15px;">
+    <p style="font-size: 0.78rem; color: var(--ink-faint); margin-top: 20px; line-height: 1.6;">
         &copy; 2026 Sakhawat Hosen Sumon. All Rights Reserved Worldwide.<br>
         Rhino&reg; and Rhinoceros&reg; are registered trademarks of Robert McNeel &amp; Associates. Shalik and ArchTools are independently developed commercial software products.
     </p>
@@ -1349,59 +1021,6 @@
 
 <!-- Interactive Scripts -->
 <script>
-    // --- Mobile Menu Toggle ---
-    var mobileToggle = document.getElementById("mobile-toggle");
-    var navLinks = document.getElementById("nav-links");
-    if (mobileToggle && navLinks) {
-        mobileToggle.addEventListener("click", function() {
-            if (navLinks.style.display === "flex") {
-                navLinks.style.display = "none";
-            } else {
-                navLinks.style.display = "flex";
-                navLinks.style.flexDirection = "column";
-                navLinks.style.position = "absolute";
-                navLinks.style.top = "60px";
-                navLinks.style.left = "0";
-                navLinks.style.width = "100%";
-                navLinks.style.background = "#09090b";
-                navLinks.style.padding = "20px";
-                navLinks.style.borderBottom = "1px solid #222228";
-            }
-        });
-    }
-
-    // --- Elevation Side Ruler Scroll Tracker ---
-    var rulerNeedle = document.getElementById("ruler-needle-readout");
-    var rulerTrack = document.getElementById("ruler-ticks-track");
-    if (rulerTrack) {
-        // Build 20 ticks
-        for (var t = 0; t < 20; t++) {
-            var tick = document.createElement("div");
-            tick.className = "ruler-tick" + (t % 5 === 0 ? " major" : "");
-            rulerTrack.appendChild(tick);
-        }
-    }
-
-    window.addEventListener("scroll", function() {
-        var h = document.documentElement.scrollHeight - window.innerHeight;
-        var scrollPct = h > 0 ? Math.min(100, Math.max(0, Math.round((window.scrollY / h) * 100))) : 0;
-        if (rulerNeedle) {
-            var str = scrollPct < 10 ? "00" + scrollPct : (scrollPct < 100 ? "0" + scrollPct : "100");
-            rulerNeedle.innerText = str + "% ELEV";
-        }
-        if (rulerTrack) {
-            var ticks = rulerTrack.children;
-            var activeIdx = Math.floor((scrollPct / 100) * ticks.length);
-            for (var i = 0; i < ticks.length; i++) {
-                if (i === activeIdx) {
-                    ticks[i].classList.add("active");
-                } else {
-                    ticks[i].classList.remove("active");
-                }
-            }
-        }
-    });
-
     // --- Product Filter Functionality ---
     function filterProducts(cat) {
         var tabs = document.querySelectorAll(".filter-tabs-bar .filter-tab-btn");
@@ -1437,7 +1056,7 @@
 
         tiles.forEach(function(tile) {
             var tCat = tile.getAttribute("data-category");
-            var tName = tile.getAttribute("data-name");
+            var tName = (tile.getAttribute("data-name") || "").toLowerCase();
             var text = tile.innerText.toLowerCase();
 
             var matchesCat = (currentMatrixCat === "all" || tCat === currentMatrixCat);
@@ -1457,12 +1076,40 @@
         }
     }
 
+    // --- Toast Notification Helper ---
+    function showToast(message) {
+        var toast = document.getElementById("copy-toast");
+        if (!toast) return;
+        toast.innerText = message;
+        toast.classList.add("show");
+        setTimeout(function() {
+            toast.classList.remove("show");
+        }, 2200);
+    }
+
     // --- Copy Command Helper ---
     function copyCommand(cmd) {
-        navigator.clipboard.writeText(cmd).then(function() {
-            alert("Copied command '" + cmd + "' to clipboard! Paste directly into Rhino 8.");
+        var fullCmd = "_" + cmd;
+        navigator.clipboard.writeText(fullCmd).then(function() {
+            showToast("Copied command '" + fullCmd + "' to clipboard!");
         }).catch(function() {
-            prompt("Copy Rhino Command:", cmd);
+            prompt("Copy Rhino Command:", fullCmd);
+        });
+    }
+
+    // --- Copy bKash Action ---
+    function copyBkashAction() {
+        var num = "01750955823";
+        navigator.clipboard.writeText(num).then(function() {
+            var btnTxt = document.getElementById("copy-btn-txt");
+            if (btnTxt) {
+                var old = btnTxt.innerText;
+                btnTxt.innerText = "COPIED 01750955823!";
+                setTimeout(function() { btnTxt.innerText = old; }, 2500);
+            }
+            showToast("Copied bKash number 01750955823 to clipboard!");
+        }).catch(function() {
+            prompt("bKash Personal Number:", num);
         });
     }
 
@@ -1565,63 +1212,141 @@
         if (e.key === "Escape") closeLightbox();
     });
 
-    // --- Copy bKash Number Helper ---
-    function copyBkashAction() {
-        var num = "01750955823";
-        navigator.clipboard.writeText(num).then(function() {
-            var btnTxt = document.getElementById("copy-btn-txt");
-            if (btnTxt) {
-                var old = btnTxt.innerText;
-                btnTxt.innerText = "COPIED 01750955823!";
-                setTimeout(function() { btnTxt.innerText = old; }, 2500);
+    // --- Flying Shalik Bird Dynamic Engine (Strictly Bounded to Hero, Responsive Count: 2 on mobile, max 5 on desktop) ---
+    (function initFlyingShalikBirds() {
+        var stage = document.getElementById("shalik-sky-stage");
+        if (!stage) return;
+
+        var birds = [];
+        var maxBirds = 5;
+
+        var shalikSvgContent = '<svg viewBox="0 0 64 42" class="shalik-bird-svg">' +
+            '<g class="bird-canvas">' +
+            '<path class="bird-tail" d="M18,22 L8,24 L10,21 L8,18 L18,20 Z" fill="#18181b"/>' +
+            '<g class="bird-wing-group-left">' +
+            '<path d="M26,20 C18,8 6,10 2,14 C8,19 16,23 26,22 Z" fill="#27272a"/>' +
+            '<path d="M22,19 C16,13 10,14 7,16 C11,19 16,21 22,20 Z" fill="#ffffff" opacity="0.95"/>' +
+            '<path d="M24,20 C20,16 16,17 14,18 C18,20 21,21 24,21 Z" fill="#e53935" opacity="0.85"/>' +
+            '</g>' +
+            '<ellipse class="bird-torso" cx="30" cy="21" rx="14" ry="6.5" fill="#18181b"/>' +
+            '<circle class="bird-head" cx="42" cy="19" r="5" fill="#09090b"/>' +
+            '<polygon class="bird-beak" points="46,18 55,20 46,22" fill="#f59e0b"/>' +
+            '<circle cx="43.5" cy="17.8" r="1.1" fill="#facc15"/>' +
+            '<circle cx="43.8" cy="17.8" r="0.6" fill="#09090b"/>' +
+            '<g class="bird-wing-group-right">' +
+            '<path d="M26,21 C19,32 7,30 3,26 C9,21 17,19 26,20 Z" fill="#27272a"/>' +
+            '<path d="M22,21 C17,27 11,26 8,24 C12,21 17,20 22,20 Z" fill="#ffffff" opacity="0.95"/>' +
+            '<path d="M24,21 C21,25 17,24 15,23 C19,21 22,20 24,20 Z" fill="#e53935" opacity="0.85"/>' +
+            '</g>' +
+            '</g>' +
+            '</svg>';
+
+        function getTargetBirdCount() {
+            var w = window.innerWidth;
+            if (w < 768) return 2;
+            if (w < 1100) return 3;
+            if (w < 1440) return 4;
+            return 5;
+        }
+
+        function createBird(idx) {
+            var el = document.createElement("div");
+            el.className = "shalik-bird";
+            el.innerHTML = shalikSvgContent;
+            stage.appendChild(el);
+
+            var sW = stage.clientWidth || window.innerWidth;
+            var sH = stage.clientHeight || 450;
+
+            var startX = Math.random() * sW;
+            var startY = 30 + Math.random() * Math.max(80, sH - 120);
+            var vx = (0.8 + Math.random() * 0.9) * (Math.random() > 0.3 ? 1 : -1);
+            var vy = (Math.random() - 0.5) * 0.5;
+            var scale = 0.55 + Math.random() * 0.35;
+
+            var flapDuration = 0.32 + Math.random() * 0.16;
+            var wings = el.querySelectorAll(".bird-wing-group-left, .bird-wing-group-right");
+            wings.forEach(function(w) {
+                w.style.animation = "shalikFlap " + flapDuration + "s ease-in-out infinite alternate";
+            });
+
+            return {
+                el: el,
+                x: startX,
+                y: startY,
+                vx: vx,
+                vy: vy,
+                scale: scale,
+                angle: 0,
+                targetY: startY,
+                glideTimer: 0
+            };
+        }
+
+        function adjustBirdFleet() {
+            var target = getTargetBirdCount();
+            while (birds.length < target && birds.length < maxBirds) {
+                birds.push(createBird(birds.length));
             }
-        }).catch(function() {
-            prompt("bKash Personal Number:", num);
-        });
-    }
+            while (birds.length > target) {
+                var removed = birds.pop();
+                if (removed && removed.el && removed.el.parentNode) {
+                    removed.el.parentNode.removeChild(removed.el);
+                }
+            }
+        }
 
-    function copyBkashQuick() {
-        var num = "01750955823";
-        navigator.clipboard.writeText(num).then(function() {
-            alert("Copied bKash Number (01750955823) to clipboard!");
-        }).catch(function() {
-            prompt("bKash Personal Number:", num);
-        });
-    }
+        adjustBirdFleet();
+        window.addEventListener("resize", adjustBirdFleet);
 
-    // --- Contact Form Actions ---
-    function sendWhatsAppInquiry() {
-        var name = document.getElementById("contact-name").value || "Architect/Designer";
-        var phone = document.getElementById("contact-phone").value || "N/A";
-        var prod = document.getElementById("contact-product").value;
-        var msg = document.getElementById("contact-msg").value || "I want to inquire about license activation.";
+        function updateBirds() {
+            var sW = stage.clientWidth || window.innerWidth;
+            var sH = stage.clientHeight || 450;
 
-        var text = "Hello Architect Sakhawat,\n\n" +
-                   "My Name: " + name + "\n" +
-                   "Contact: " + phone + "\n" +
-                   "Product of Interest: " + prod + "\n" +
-                   "Message / Machine ID: " + msg + "\n\n" +
-                   "Sent via arch-sakhawat.github.io";
+            for (var i = 0; i < birds.length; i++) {
+                var b = birds[i];
 
-        var url = "https://wa.me/8801521776439?text=" + encodeURIComponent(text);
-        window.open(url, "_blank");
-    }
+                b.glideTimer++;
+                if (b.glideTimer > 180 + Math.random() * 120) {
+                    b.glideTimer = 0;
+                    b.targetY = 40 + Math.random() * Math.max(80, sH - 120);
+                }
 
-    function sendEmailInquiry() {
-        var name = document.getElementById("contact-name").value || "Architect/Designer";
-        var prod = document.getElementById("contact-product").value;
-        var msg = document.getElementById("contact-msg").value || "";
+                b.vy += (b.targetY - b.y) * 0.001;
+                b.vy = Math.max(-0.8, Math.min(0.8, b.vy));
 
-        var subject = "[Software Inquiry] " + prod + " - " + name;
-        var body = "Hello Architect Sakhawat,\n\n" +
-                   "Name: " + name + "\n" +
-                   "Interested in: " + prod + "\n\n" +
-                   "Details / Rhino Machine ID:\n" + msg + "\n\n" +
-                   "Best regards,\n" + name;
+                b.x += b.vx;
+                b.y += b.vy;
 
-        var url = "mailto:arch.sakhawat@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-        window.location.href = url;
-    }
+                // Stage boundary wraps
+                if (b.vx > 0 && b.x > sW + 60) {
+                    b.x = -60;
+                    b.y = 40 + Math.random() * Math.max(80, sH - 120);
+                } else if (b.vx < 0 && b.x < -60) {
+                    b.x = sW + 60;
+                    b.y = 40 + Math.random() * Math.max(80, sH - 120);
+                }
+
+                if (b.y < 20) { b.y = 20; b.vy = Math.abs(b.vy) * 0.8; }
+                if (b.y > sH - 50) { b.y = sH - 50; b.vy = -Math.abs(b.vy) * 0.8; }
+
+                var targetAngle = Math.atan2(b.vy, Math.abs(b.vx)) * (180 / Math.PI) * 0.45;
+                b.angle += (targetAngle - b.angle) * 0.1;
+
+                var flip = b.vx < 0 ? " scaleX(-1)" : " scaleX(1)";
+                var transformStr = "translate3d(" + b.x + "px, " + b.y + "px, 0)" +
+                                   " rotate(" + (b.vx < 0 ? -b.angle : b.angle) + "deg)" +
+                                   flip +
+                                   " scale(" + b.scale + ")";
+
+                b.el.style.transform = transformStr;
+            }
+
+            requestAnimationFrame(updateBirds);
+        }
+
+        requestAnimationFrame(updateBirds);
+    })();
 </script>
 
 </body>
