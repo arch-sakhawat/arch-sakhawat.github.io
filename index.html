@@ -89,8 +89,8 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
           "operatingSystem": "Windows 10, Windows 11 (64-bit)",
           "applicationCategory": "DesignApplication",
           "applicationSubCategory": "CAD Architectural 3D Modeling Plug-in",
-          "softwareVersion": "1.0.6",
-          "downloadUrl": "https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.6-Setup.exe",
+          "softwareVersion": "1.0.8",
+          "downloadUrl": "https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.8-Setup.exe",
           "author": { "@id": "https://arch-sakhawat.github.io/#person" },
           "description": "Parametric architectural modeling suite for Rhinoceros 8 with 15 generators, real-time viewport feedback, and automatic wall cuts."
         },
@@ -222,7 +222,7 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
             <!-- 1. Shalik for Rhino 8 (Flagship) -->
             <div class="product-card flagship-border" data-category="bim">
                 <div>
-                    <span class="product-card-badge flagship">FLAGSHIP SUITE // v1.0.6 STABLE</span>
+                    <span class="product-card-badge flagship">FLAGSHIP SUITE // v1.0.8 STABLE</span>
                     <h3 class="product-title">Shalik for Rhino 8</h3>
                     <div class="product-tagline">High-Performance Parametric Architectural Generation Suite &amp; BIM Engine</div>
                     <p class="product-desc">
@@ -240,8 +240,8 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
                     <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/" target="_blank" class="btn-artcraft" style="text-decoration: none;">
                         <span>Launch Shalik Portal ↗</span>
                     </a>
-                    <a href="https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.6-Setup.exe" class="btn-artcraft-outline" style="text-decoration: none;">
-                        <span>Download v1.0.6 Installer</span>
+                    <a href="https://github.com/arch-sakhawat/SHALIK-For-Rhino/raw/main/Shalik-1.0.8-Setup.exe" class="btn-artcraft-outline" style="text-decoration: none;">
+                        <span>Download v1.0.8 Installer</span>
                     </a>
                     <a href="https://arch-sakhawat.github.io/SHALIK-For-Rhino/buy.html" target="_blank" class="btn-artcraft-danger" style="text-decoration: none;">
                         <span>Buy License</span>
@@ -764,7 +764,7 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
         <div class="showcase-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); margin-top: 24px; margin-bottom: 20px;">
             
             <!-- Card 1: Glazed Door -->
-            <article class="showcase-card interactive-tilt" data-reveal>
+            <article class="showcase-card interactive-tilt is-revealed" style="opacity: 1; transform: none;">
                 <span class="tick tick-tl"></span>
                 <span class="tick tick-tr"></span>
                 <span class="tick tick-bl"></span>
@@ -783,7 +783,7 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
             </article>
 
             <!-- Card 2: Stair with Cable Railing -->
-            <article class="showcase-card interactive-tilt" data-reveal>
+            <article class="showcase-card interactive-tilt is-revealed" style="opacity: 1; transform: none;">
                 <span class="tick tick-tl"></span>
                 <span class="tick tick-tr"></span>
                 <span class="tick tick-bl"></span>
@@ -802,7 +802,7 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
             </article>
 
             <!-- Card 3: Commercial Escalator Suite -->
-            <article class="showcase-card interactive-tilt" data-reveal>
+            <article class="showcase-card interactive-tilt is-revealed" style="opacity: 1; transform: none;">
                 <span class="tick tick-tl"></span>
                 <span class="tick tick-tr"></span>
                 <span class="tick tick-bl"></span>
@@ -950,7 +950,7 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
     </section>
 
     <!-- SECTION 05: ARCHITECT & COMPUTATIONAL DEVELOPER PROFILE (Pure Reference Layout from SHALIK-For-Rhino) -->
-    <section class="author-section-bottom" id="author" data-reveal style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 80px 24px; background: #ffffff;">
+    <section class="author-section-bottom is-revealed" id="author" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 80px 24px; background: #ffffff; opacity: 1;">
         <div class="hud-label" style="display: inline-flex; align-items: center; justify-content: center; margin: 0 auto 24px; text-align: center;">// ARCHITECT &amp; COMPUTATIONAL DEVELOPER</div>
 
         <!-- Author Profile Card (Pure reference layout: no background, no border on photo, centered alignment) -->
@@ -1402,6 +1402,28 @@ li::-moz-selection, code::-moz-selection, pre::-moz-selection, input::-moz-selec
         }
 
         requestAnimationFrame(updateBirds);
+    })();
+
+    // Reveal animations observer
+    (function initRevealObserver() {
+        if (!('IntersectionObserver' in window)) {
+            document.querySelectorAll('[data-reveal]').forEach(function(el) {
+                el.classList.add('is-revealed');
+            });
+            return;
+        }
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.05, rootMargin: "0px 0px -20px 0px" });
+
+        document.querySelectorAll('[data-reveal]').forEach(function(el) {
+            observer.observe(el);
+        });
     })();
 </script>
 
